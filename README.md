@@ -44,10 +44,10 @@ docker compose exec client npm install
 
 ### 5. Initialiser la Base de Données
 # Créer la DB
-docker compose exec api bin/console doctrine:database:create --if-not-exists
+docker compose exec api php bin/console doctrine:database:create --if-not-exists
 
 # Appliquer les migrations
-docker compose exec api bin/console doctrine:migrations:migrate --no-interaction
+docker compose exec api php bin/console doctrine:migrations:migrate --no-interaction
 
 ---
 
